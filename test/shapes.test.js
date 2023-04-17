@@ -9,12 +9,12 @@ describe('lowestSumForShape function ', function () {
       assert.equal('circle', lowestSumShape.getLowest());
 
     });
-    
-    it ("should return please enter valid data", function(){
+
+    it ("should return please enter valid data when data no data is entered", function(){
         assert.equal('please enter valid data', lowestSumForShape(''));
 
     });
-    it("should return please enter valid input when the",function(){
+    it("should return please enter valid input when the data type is not an object",function(){
 
         assert.equal('no input entered',lowestSumForShape("saffah"))
     })
