@@ -7,36 +7,37 @@ function lowestSumForShape(shapes) {
   var min = Infinity;
 
 
-if (typeof shapes == "string"){
-  return 'enter an array pls'
-}
+  if (shapes !== null && shapes !== '') {
+    if (typeof shapes == 'object') {
 
-   if (shapes !== null || shapes !== '') {
+      for (var i = 0; i < shapes.length; i++) {
+        var type = shapes[i].type
+        if (holder[type] === undefined) {
+          holder[type] = shapes[i].number
 
-    for (var i = 0; i < shapes.length; i++) {
-      var type = shapes[i].type
-      if (holder[type] === undefined) {
-        holder[type] = shapes[i].number
+        }
+
+        else {
+          holder[type] += shapes[i].number
+        }
 
       }
+      for (var x in holder) {
+        if (holder[x] < min) {
+          min = holder[x]
+          shapez = x
 
-      else {
-        holder[type] += shapes[i].number
+        }
       }
 
+      return shapez
     }
-    for (var x in holder) {
-      if (holder[x] < min) {
-        min = holder[x]
-        shapez = x
 
-      }
+    else {
+      return 'no input entered'
     }
-
-    return shapez
   }
   else {
-    return ' please enter valid data'
+    return 'please enter valid data'
   }
- 
 }
