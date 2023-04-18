@@ -35,15 +35,20 @@ function lowestSumForShape(shapesArray) {
     }
 
     else {
-      return 'no input entered'
+      return 'please enter valid input'
     }
   }
   else {
-    return 'please enter valid data'
+    return 'no input entered'
   }
 
   return {
     getLowest,
     getShapes
   }
+}
+
+
+function orangeBlue(){
+  
 }
